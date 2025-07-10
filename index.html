@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhuvaneswari Kapuluru | AI Engineer</title>
+  <title>Bhuvaneswari Kapuluru | Data Analyst</title>
 
   <!-- Bootstrap & Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,30 +37,6 @@
       height: 600px;
     }
 
-    .sidebar {
-      width: 280px;
-      background-color: #06923E;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sidebar button {
-      flex: 1;
-      padding: 20px;
-      border: none;
-      background-color: #28f1ff;
-      color: black;
-      font-weight: 500;
-      font-size: 25px;
-      cursor: pointer;
-      border-bottom: 1px solid #058435;
-      transition: background 0.3s;
-    }
-
-    .sidebar button:hover {
-      background-color: #12d5e7;
-    }
-
     #vizContainerModal4 {
       flex-grow: 1;
       height: 100%;
@@ -77,58 +53,53 @@
       border: none;
     }
 
-    .insight-container {
-      max-width: 1200px;
-      margin: 40px auto;
-      background-color: #fff;
-      padding: 30px;
+    .insights-box {
+      background-color: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 1200px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .insight-container h4 {
-      text-align: center;
-      margin-bottom: 25px;
+    .insights-box h4 {
       font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
     }
 
-    .list-group-item {
-      font-size: 1.05rem;
+    .insights-box ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .insights-box li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body style="background-color: rgb(255, 194, 103);">
 
-  <h3>📊 Executive Insights Dashboard</h3>
+  <h3>📊 Amazon Sales Insights Dashboard</h3>
 
   <div class="dashboard-wrapper">
     <!-- Power BI Dashboard Embed -->
     <div id="vizContainerModal4">
-      <iframe title="product" src="https://app.powerbi.com/reportEmbed?reportId=ce4eab0e-d29e-4761-8fda-3778c5624172&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5" allowFullScreen="true"></iframe>
+      <iframe title="AMAZON_SALES_DASHBOARD2" src="https://app.powerbi.com/reportEmbed?reportId=0976e465-51e7-4f72-ba06-d545f91596d5&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5" allowFullScreen="true"></iframe>
     </div>
   </div>
 
-  <!-- Sales Dashboard Insights -->
-  <div class="insight-container">
-    <h4>📈 Key Insights from the Amazon Sales Dashboard</h4>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">🔹 <strong>Top Performing Category:</strong> Electronics consistently generates the highest revenue among all categories.</li>
-      <li class="list-group-item">🔹 <strong>Peak Sales Month:</strong> Sales sharply increase in November due to promotional events like Black Friday.</li>
-      <li class="list-group-item">🔹 <strong>Regional Performance:</strong> Western US states, particularly California, dominate in order volume and sales value.</li>
-      <li class="list-group-item">🔹 <strong>Customer Loyalty:</strong> Repeat customers exhibit higher average order values than new buyers.</li>
-      <li class="list-group-item">🔹 <strong>Opportunity for Growth:</strong> Office Supplies and Home Improvement categories show lower performance, suggesting potential for targeted campaigns.</li>
-    </ul>
-  </div>
-
-  <!-- Churn Dashboard Insights -->
-  <div class="insight-container">
-    <h4>🔍 Key Insights from the Customer Churn Dashboard</h4>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">🔸 <strong>Churn Rate:</strong> The overall customer churn rate stands around 27%, indicating room for retention improvement.</li>
-      <li class="list-group-item">🔸 <strong>High-Risk Profiles:</strong> Month-to-month contract holders are significantly more likely to churn compared to long-term subscribers.</li>
-      <li class="list-group-item">🔸 <strong>Churn Drivers:</strong> Increased customer service calls and unresolved issues are key churn predictors.</li>
-      <li class="list-group-item">🔸 <strong>Tenure Impact:</strong> Customers with longer tenure are less likely to leave, emphasizing the value of early engagement strategies.</li>
-      <li class="list-group-item">🔸 <strong>Payment Method Insight:</strong> Users paying via electronic check show higher churn rates than those on autopay systems.</li>
+  <!-- Insights Section -->
+  <div class="container insights-box">
+    <h4>🔍 Key Business Insights</h4>
+    <ul>
+      <li><strong>Top Categories:</strong> Electronics and Home & Kitchen are the most profitable categories — recommending increased inventory and ad spend here.</li>
+      <li><strong>Regional Performance:</strong> Cities like New York and Los Angeles drive most revenue. Focused marketing in these areas can further improve ROI.</li>
+      <li><strong>Seasonality:</strong> Q2 and Q4 show strong sales peaks, indicating opportunities to run targeted promotions and sales events in these periods.</li>
+      <li><strong>Best-selling Products:</strong> Smart devices and kitchen appliances consistently lead in demand — ideal for bundling and discount campaigns.</li>
+      <li><strong>Payment Analysis:</strong> High cancellation rates linked to Cash on Delivery (COD) — shift toward prepaid discounts to reduce loss.</li>
+      <li><strong>Customer Segmentation:</strong> RFM analysis identifies high-value repeat buyers — suggest deploying loyalty programs and retention strategies.</li>
+      <li><strong>Churn Risk:</strong> A noticeable segment of users show declining order patterns — recommend re-engagement emails and offers.</li>
     </ul>
   </div>
 
