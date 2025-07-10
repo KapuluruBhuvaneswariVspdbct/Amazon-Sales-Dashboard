@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhuvaneswari Kapuluru | Data Analyst</title>
+  <title>Bhuvaneswari Kapuluru | AI Engineer</title>
 
   <!-- Bootstrap & Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,6 +37,30 @@
       height: 600px;
     }
 
+    .sidebar {
+      width: 280px;
+      background-color: #06923E;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar button {
+      flex: 1;
+      padding: 20px;
+      border: none;
+      background-color: #28f1ff;
+      color: black;
+      font-weight: 500;
+      font-size: 25px;
+      cursor: pointer;
+      border-bottom: 1px solid #058435;
+      transition: background 0.3s;
+    }
+
+    .sidebar button:hover {
+      background-color: #12d5e7;
+    }
+
     #vizContainerModal4 {
       flex-grow: 1;
       height: 100%;
@@ -52,42 +76,61 @@
       height: 541.25px;
       border: none;
     }
+
+    .insight-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .insight-container h4 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    .list-group-item {
+      font-size: 1.05rem;
+    }
   </style>
 </head>
 <body style="background-color: rgb(255, 194, 103);">
 
-  <h3>📊 Amazon Sales Insights Dashboard</h3>
+  <h3>📊 Executive Insights Dashboard</h3>
 
   <div class="dashboard-wrapper">
     <!-- Power BI Dashboard Embed -->
     <div id="vizContainerModal4">
-      <iframe title="AMAZON_SALES_DASHBOARD2" src="https://app.powerbi.com/reportEmbed?reportId=0976e465-51e7-4f72-ba06-d545f91596d5&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5" allowFullScreen="true"></iframe>
+      <iframe title="product" src="https://app.powerbi.com/reportEmbed?reportId=ce4eab0e-d29e-4761-8fda-3778c5624172&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5" allowFullScreen="true"></iframe>
     </div>
   </div>
-<!-- Insights Section -->
-<div class="container mt-5 mb-5 p-4 bg-white rounded shadow">
-  <h4 class="text-center mb-4">📈 Key Insights from the Sales Dashboard</h4>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">🔹 <strong>Top Performing Category:</strong> Electronics drives the highest revenue.</li>
-    <li class="list-group-item">🔹 <strong>Peak Sales Month:</strong> Sales peak in November due to seasonal promotions.</li>
-    <li class="list-group-item">🔹 <strong>High Revenue Region:</strong> The West Coast outperforms other regions.</li>
-    <li class="list-group-item">🔹 <strong>Customer Behavior:</strong> Repeat customers have higher average order values.</li>
-    <li class="list-group-item">🔹 <strong>Improvement Area:</strong> Office Supplies category underperforms across all regions.</li>
-  </ul>
-</div>
 
-<!-- Churn Dashboard Insights -->
-<div class="container mb-5 p-4 bg-white rounded shadow">
-  <h4 class="text-center mb-4">🔍 Key Insights from the Customer Churn Dashboard</h4>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">🔸 <strong>Overall Churn Rate:</strong> Approximately 27% of customers churn annually.</li>
-    <li class="list-group-item">🔸 <strong>High Risk Segment:</strong> Customers with month-to-month contracts show the highest churn probability.</li>
-    <li class="list-group-item">🔸 <strong>Key Churn Indicators:</strong> High customer service calls and long resolution times are strongly linked to churn.</li>
-    <li class="list-group-item">🔸 <strong>Tenure Impact:</strong> Longer-tenured customers are less likely to churn, suggesting the importance of retention strategies early in the lifecycle.</li>
-    <li class="list-group-item">🔸 <strong>Payment Method Insight:</strong> Customers using electronic check are more likely to churn compared to those on credit card autopay.</li>
-  </ul>
-</div>
+  <!-- Sales Dashboard Insights -->
+  <div class="insight-container">
+    <h4>📈 Key Insights from the Amazon Sales Dashboard</h4>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">🔹 <strong>Top Performing Category:</strong> Electronics consistently generates the highest revenue among all categories.</li>
+      <li class="list-group-item">🔹 <strong>Peak Sales Month:</strong> Sales sharply increase in November due to promotional events like Black Friday.</li>
+      <li class="list-group-item">🔹 <strong>Regional Performance:</strong> Western US states, particularly California, dominate in order volume and sales value.</li>
+      <li class="list-group-item">🔹 <strong>Customer Loyalty:</strong> Repeat customers exhibit higher average order values than new buyers.</li>
+      <li class="list-group-item">🔹 <strong>Opportunity for Growth:</strong> Office Supplies and Home Improvement categories show lower performance, suggesting potential for targeted campaigns.</li>
+    </ul>
+  </div>
 
+  <!-- Churn Dashboard Insights -->
+  <div class="insight-container">
+    <h4>🔍 Key Insights from the Customer Churn Dashboard</h4>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">🔸 <strong>Churn Rate:</strong> The overall customer churn rate stands around 27%, indicating room for retention improvement.</li>
+      <li class="list-group-item">🔸 <strong>High-Risk Profiles:</strong> Month-to-month contract holders are significantly more likely to churn compared to long-term subscribers.</li>
+      <li class="list-group-item">🔸 <strong>Churn Drivers:</strong> Increased customer service calls and unresolved issues are key churn predictors.</li>
+      <li class="list-group-item">🔸 <strong>Tenure Impact:</strong> Customers with longer tenure are less likely to leave, emphasizing the value of early engagement strategies.</li>
+      <li class="list-group-item">🔸 <strong>Payment Method Insight:</strong> Users paying via electronic check show higher churn rates than those on autopay systems.</li>
+    </ul>
+  </div>
 
 </body>
 </html>
