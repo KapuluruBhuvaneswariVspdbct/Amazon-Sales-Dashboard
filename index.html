@@ -12,7 +12,7 @@
 
   <style>
     body {
-      background-color: #f9f9f9;
+      background-color: rgb(255, 194, 103);
       font-family: 'Lato', sans-serif;
       margin: 0;
       padding: 0;
@@ -27,30 +27,23 @@
 
     .dashboard-wrapper {
       display: flex;
+      flex-direction: column;
+      gap: 20px;
       width: 100%;
       max-width: 1200px;
       margin: 20px auto;
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      height: 600px;
+      padding: 20px;
     }
 
-    #vizContainerModal4 {
-      flex-grow: 1;
-      height: 100%;
-      padding: 0;
-      background-color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    iframe {
-      width: 1140px;
-      height: 541.25px;
-      border: none;
+    .dashboard-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .insights-box {
@@ -78,29 +71,77 @@
     }
   </style>
 </head>
-<body style="background-color: rgb(255, 194, 103);">
+
+<body>
 
   <h3>📊 Amazon Sales Insights Dashboard</h3>
 
+  <!-- Dashboard Images -->
   <div class="dashboard-wrapper">
-    <!-- Power BI Dashboard Embed -->
-    <div id="vizContainerModal4">
-      <iframe title="AMAZON_SALES_DASHBOARD2" src="https://app.powerbi.com/reportEmbed?reportId=0976e465-51e7-4f72-ba06-d545f91596d5&autoAuth=true&ctid=82d0a01d-608b-4667-9790-7ea2d3429dc5" allowFullScreen="true"></iframe>
-    </div>
+
+    <img 
+      src="d1.png" 
+      alt="Amazon Sales Dashboard - Page 1" 
+      class="dashboard-image"
+    >
+
+    <img 
+      src="d2.png" 
+      alt="Amazon Sales Dashboard - Page 2" 
+      class="dashboard-image"
+    >
+
   </div>
 
   <!-- Insights Section -->
   <div class="container insights-box">
+
     <h4>🔍 Key Business Insights</h4>
+
     <ul>
-      <li><strong>Top Categories:</strong> Electronics and Home & Kitchen are the most profitable categories — recommending increased inventory and ad spend here.</li>
-      <li><strong>Regional Performance:</strong> Cities like New York and Los Angeles drive most revenue. Focused marketing in these areas can further improve ROI.</li>
-      <li><strong>Seasonality:</strong> Q2 and Q4 show strong sales peaks, indicating opportunities to run targeted promotions and sales events in these periods.</li>
-      <li><strong>Best-selling Products:</strong> Smart devices and kitchen appliances consistently lead in demand — ideal for bundling and discount campaigns.</li>
-      <li><strong>Payment Analysis:</strong> High cancellation rates linked to Cash on Delivery (COD) — shift toward prepaid discounts to reduce loss.</li>
-      <li><strong>Customer Segmentation:</strong> RFM analysis identifies high-value repeat buyers — suggest deploying loyalty programs and retention strategies.</li>
-      <li><strong>Churn Risk:</strong> A noticeable segment of users show declining order patterns — recommend re-engagement emails and offers.</li>
+      <li>
+        <strong>Top Categories:</strong>
+        Electronics and Home & Kitchen are the most profitable categories —
+        recommending increased inventory and ad spend here.
+      </li>
+
+      <li>
+        <strong>Regional Performance:</strong>
+        Cities like New York and Los Angeles drive most revenue.
+        Focused marketing in these areas can further improve ROI.
+      </li>
+
+      <li>
+        <strong>Seasonality:</strong>
+        Q2 and Q4 show strong sales peaks, indicating opportunities to run
+        targeted promotions and sales events in these periods.
+      </li>
+
+      <li>
+        <strong>Best-selling Products:</strong>
+        Smart devices and kitchen appliances consistently lead in demand —
+        ideal for bundling and discount campaigns.
+      </li>
+
+      <li>
+        <strong>Payment Analysis:</strong>
+        High cancellation rates linked to Cash on Delivery (COD) —
+        shift toward prepaid discounts to reduce loss.
+      </li>
+
+      <li>
+        <strong>Customer Segmentation:</strong>
+        RFM analysis identifies high-value repeat buyers —
+        suggest deploying loyalty programs and retention strategies.
+      </li>
+
+      <li>
+        <strong>Churn Risk:</strong>
+        A noticeable segment of users show declining order patterns —
+        recommend re-engagement emails and offers.
+      </li>
     </ul>
+
   </div>
 
 </body>
